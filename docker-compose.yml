@@ -1,0 +1,14 @@
+---
+version: "2"
+
+services:
+  goaccess:
+    build:
+      context: .
+      args:
+        - MAXMIND_LICENSE_KEY=xxx
+    ports:
+      - "127.0.0.1:7890:7890"
+    environment:
+      - CONTAINER_NAME=xxx
+    restart: unless-stopped
